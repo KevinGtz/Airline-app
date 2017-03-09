@@ -1,29 +1,32 @@
-from django.shortcuts import get_object_or_404, render
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
 from .models import Flight
+from .serializers import FlihgtSerializer
 # Create your views here.
 
 
 # Search Flights
-def index(request):
-    pass
+# def index(request):
+#     pass
 
 
 # Show a list of Flights
-def list_flights(request):
-    latest_flights_list = Flight.objects.order_by('?')[:10]
-    context = {
-        'latest_flights_list': latest_flights_list
-    }
-    return render(request, 'flights/flights.html', context=context)
+class ListFlights(APIView):
+
+    def get(self, request):
+        flights = Flight.objects.all()
+        serializer = FlihgtSerializer(flights, many=True)
+        return Response(serializer.data)
 
 
 # Show Flight Details
-def flight_details(request, flight_id):
-    flight = get_object_or_404(Flight, pk=flight_id)
-    return render(request, 'flights/flight_detail.html', {'flight': flight})
+# def flight_details(request, flight_id):
+#     flight = get_object_or_404(Flight, pk=flight_id)
+#     return render(request, 'flights/flight_detail.html', {'flight': flight})
 
 
 # Create Flights -*- (KLG 03/07/17) I think this need to be only in the admin page -*-
-def create_flights(request):
-    pass
+# def create_flights(request):
+#     pass
