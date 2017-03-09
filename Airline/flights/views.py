@@ -31,9 +31,6 @@ def list_flights(request, format=None):
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def flight_detail(request, flight_id, format=None):
-    """
-    Retrieve, update or delete a snippet instance.
-    """
     try:
         flight = Flight.objects.get(pk=flight_id)
     except Flight.DoesNotExist:
