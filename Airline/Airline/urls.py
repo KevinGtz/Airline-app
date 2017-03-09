@@ -15,8 +15,24 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from rest_framework.urlpatterns import format_suffix_patterns
+# from rest_framework import routers
+# from flights.views import CreateFlight, ListFlights, DetailFlight
+from flights import views
+
+
+# router = routers.DefaultRouter()
+# router.register('create', CreateFlight)
+# router.register('flights', ListFlights)
+
 
 urlpatterns = [
+    url(r'^flights/$', views.list_flights),
+    url(r'^flights/(?P<flight_id>[0-9]+)$', views.flight_detail),
     url(r'^admin/', admin.site.urls),
-    url(r'^flights/', include('flights.urls')),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
+# url(r'^create/', views.CreateFlight.as_view()),
+# url(r'^flights/(?P<flight_id>[0-9]+)', views.DetailFlight.as_view()),
+# url(r'^flights/', views.ListFlights.as_view()),
