@@ -1,0 +1,20 @@
+{
+  "name": "framwork7_app",
+  "homepage": "https://github.com/KevinGtz/Airline-app",
+  "authors": [
+    "Kevin Gutierrez <kevin@novelistik.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "framework7": "^1.5.3"
+  }
+}
