@@ -32,5 +32,3 @@ You can find this sample in framwork7_app/main_app.
 I Include the url for my project in heroku but it doesn't work well and i need to find why.
 
 Also here is an example of a Pseudocode and a Flowchart tha represents an Inteligent Maquiladora.
-
-[WIP]
