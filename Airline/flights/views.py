@@ -55,7 +55,6 @@ def flight_detail(request, flight_id, format=None):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-
 # class ListFlights(APIView):
 #
 #     def get(self, request):

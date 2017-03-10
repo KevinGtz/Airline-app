@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>My App</title>
     <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="css_1/framework7.ios.min.css">
+    <link rel="stylesheet" href="css_1/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/my-app.css">
   </head>
@@ -131,6 +131,7 @@
                         <div class="item-title label">Departure City</div>
                         <div class="item-input">
                           <select id="register-departure_city">
+                            <option></option>
                             <option>mexico</option>
                             <option>new york</option>
                             <option>cancun</option>
@@ -146,6 +147,7 @@
                         <div class="item-title label">Arrival City</div>
                         <div class="item-input">
                           <select id="register-arrival_city">
+                            <option></option>
                             <option>mexico</option>
                             <option>new york</option>
                             <option>cancun</option>
@@ -160,7 +162,7 @@
                       <div class="item-inner"> 
                         <div class="item-title label">Departure Time</div>
                         <div class="item-input">
-                          <input id="register-departure_time" type="time" placeholder="Departure Time" value="12:00">
+                          <input id="register-departure_time" type="time" placeholder="Departure Time">
                         </div>
                       </div>
                     </div>
@@ -171,7 +173,7 @@
                       <div class="item-inner"> 
                         <div class="item-title label">Arrival Time</div>
                         <div class="item-input">
-                          <input id="register-arrival_time" type="time" placeholder="Arrival Time" value="12:00">
+                          <input id="register-arrival_time" type="time" placeholder="Arrival Time">
                         </div>
                       </div>
                     </div>
@@ -182,7 +184,7 @@
                       <div class="item-inner"> 
                         <div class="item-title label">Departure date</div>
                         <div class="item-input">
-                          <input id="register-departure_date" type="date" placeholder="Departure date" value="2014-04-30">
+                          <input id="register-departure_date" type="date" placeholder="Departure date">
                         </div>
                       </div>
                     </div>
@@ -193,7 +195,7 @@
                       <div class="item-inner"> 
                         <div class="item-title label">Arrival date</div>
                         <div class="item-input">
-                          <input id="register-arrival_date" type="date" placeholder="Arrival date" value="2014-04-30">
+                          <input id="register-arrival_date" type="date" placeholder="Arrival date">
                         </div>
                       </div>
                     </div>
@@ -202,7 +204,9 @@
               </div>
               <div class="content-block">
                 <div class="row">
-                  <div class="col-50"><a href="#" class="button button-big button-fill color-red">Cancel</a></div>
+                  <div class="col-50">
+                    <input id="cancel-register" type="submit" value="Cancel" class="button button-big button-fill color-red">
+                  </div>
                   <div class="col-50">
                     <input id="summit-newflight" type="submit" value="Submit" class="button button-big button-fill color-green">
                   </div>
@@ -210,10 +214,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- Bottom Toolbar-->
-        <div class="toolbar">
-          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="http://www.google.com" class="link">Link 2</a></div>
         </div>
       </div>
     </div>
